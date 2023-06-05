@@ -1,8 +1,10 @@
 package conta;
 
 import java.util.Scanner;
-
+import conta.model.Conta;
 import conta.util.Cores;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 
@@ -12,16 +14,51 @@ public class Menu {
 
 		int opcao;
 
+		// Teste da Classe Conta
+		Conta c1 = new Conta(1, 123, 1, "Aline", 10000.0f);
+		c1.visualizar();
+		c1.sacar(15000.0f);
+		c1.visualizar();
+		c1.depositar(8000.0f);
+		c1.visualizar();
+
+		// Teste da Classe Conta
+		Conta c2 = new Conta(3, 123, 1, "Marcos", 700000.0f);
+		c2.visualizar();
+		c2.sacar(12000.0f);
+		c2.visualizar();
+		c2.depositar(5000.0f);
+		c2.visualizar();
+
+		// Teste da Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Wiliam Martin", 0.0f, 2000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+
+		// Teste da Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Vitoria dos Santos", 100000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+
 		while (true) {
 
 			System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND
 					+ "      \t\t********************************************************   \t\t");
 			System.out.println("\t\t                                                         \t\t");
-			System.out.println(Cores.TEXT_WHITE +"\t\t               BANCO DO BRAZIL COM Z                     \t\t");
+			System.out.println(Cores.TEXT_WHITE + "\t\t               BANCO DO BRAZIL COM Z                     \t\t");
 			System.out.println("\t\t                                                         \t\t");
-			System.out.println(Cores.TEXT_BLUE_BOLD+ "  \t\t*********************************************************\t\t");
-			System.out.println(Cores.TEXT_BLUE_BOLD +"  \t\t**                                                     **\t\t");
-			System.out.println(Cores.TEXT_PURPLE +" \t\t**            1 - Criar Conta                          **\t\t");
+			System.out.println(
+					Cores.TEXT_BLUE_BOLD + "  \t\t*********************************************************\t\t");
+			System.out.println(
+					Cores.TEXT_BLUE_BOLD + "  \t\t**                                                     **\t\t");
+			System.out
+					.println(Cores.TEXT_PURPLE + " \t\t**            1 - Criar Conta                          **\t\t");
 			System.out.println(" \t\t**            2 - Listar todas as Contas               **\t\t");
 			System.out.println("\t\t**            3 - Buscar Conta por Numero              **\t\t");
 			System.out.println("\t\t**            4 - Atualizar Dados da Conta             **\t\t");
