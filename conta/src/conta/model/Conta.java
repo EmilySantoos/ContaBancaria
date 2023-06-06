@@ -2,8 +2,7 @@ package conta.model;
 
 import conta.util.Cores;
 
-public class Conta {
-	
+public abstract class Conta {
 	private int numero ;
 	private int agencia;
 	private int tipo;
@@ -80,7 +79,7 @@ public boolean sacar(float valor) {
 		break;
 		}
 		
-		System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND+"\n\n*********************************************************");
+		System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND+"*********************************************************");
 		System.out.println(Cores.TEXT_WHITE+"\t\t    Dados da Conta:                              ");
 		System.out.println(Cores.TEXT_BLUE_BOLD + Cores.ANSI_BLACK_BACKGROUND+"*********************************************************");
 		System.out.println(Cores.TEXT_WHITE+"Numero da Conta:" + this.numero+ "                                        ");
